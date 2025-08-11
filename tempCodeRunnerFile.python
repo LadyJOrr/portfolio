@@ -1,0 +1,7 @@
+message = "Hello Python world!"
+print(message)
+# This script prints a greeting message to the console.
+
+message = "Hello Python Crash course world!"
+print(message)
+# This script prints a modified greeting message to the console.

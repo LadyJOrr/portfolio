@@ -5,48 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jancee Portfolio</title>
   <link rel="stylesheet" href="style/main.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100">
+<body>
 
   <!-- Navigation -->
-  <nav class="bg-white shadow-md py-4 px-4">
-    <div class="nav-container">
-      <!-- Logo -->
-      <div class="text-xl font-bold text-blue-700">Jancee Portfolio</div>
+  <nav class="navbar">
+    <div class="title">Jancee Portfolio</div>
 
-      <!-- Desktop Menu -->
-      <div class="hidden md:flex space-x-6">
-        <a href="#" class="text-gray-700 hover:text-blue-600">Home</a>
-        <a href="#" class="text-gray-700 hover:text-blue-600">About</a>
-        <a href="#" class="text-gray-700 hover:text-blue-600">Projects</a>
-        <a href="#" class="text-gray-700 hover:text-blue-600">Contact</a>
-      </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
 
-      <!-- Mobile Hamburger -->
-      <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
-        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden px-4 py-4 space-y-2">
-      <a href="#" class="block text-gray-700 hover:text-blue-600">Home</a>
-      <a href="#" class="block text-gray-700 hover:text-blue-600">About</a>
-      <a href="#" class="block text-gray-700 hover:text-blue-600">Projects</a>
-      <a href="#" class="block text-gray-700 hover:text-blue-600">Contact</a>
-    </div>
+    <!-- Hamburger for mobile -->
+    <button id="menu-toggle" class="hamburger">&#9776;</button>
   </nav>
 
+  <!-- Mobile Menu (hidden by default) -->
+  <div id="mobile-menu" class="mobile-menu hidden">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+  </div>
+
   <!-- Main Content -->
-  <main class="p-6">
-    <h1>Welcome to My Portfolio</h1>
-    <p>This is my first web page using HTML, CSS, and JavaScript.</p>
-    <p>Feel free to explore my projects and skills.</p>
+  <main class="main">
+    <h1>Welcome to My Portfolio!</h1>
+    <p class="intro">
+      Hi, my name is Jancee and I am a Software Engineer.
+      This is my first web page using HTML, CSS, and JavaScript.
+      Feel free to explore my projects and skills.
+    </p>
   </main>
 
-  <script src="script/main.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    toggle.addEventListener("click", function () {
+      mobileMenu.classList.toggle("show");
+    });
+  });
+</script>
+
 </body>
 </html>
